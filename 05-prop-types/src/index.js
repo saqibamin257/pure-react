@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import stamp from './img/stamp.jpg';
 import logo512 from './img/logo512.png';
 
@@ -197,38 +197,38 @@ import logo512 from './img/logo512.png';
 // }
 
 //------------ ES6 way to write component---------------------//
-const CreditCard = ({cardInfo}) => {
-    return(
-        <div>
-            <p>Name: {cardInfo.name}</p>
-            <p>Expiry Date: {cardInfo.expiry}</p>
-            <p>Card No.: {cardInfo.cardNo}</p>
-            <p>Bank: {cardInfo.bankName}</p>
-        </div>
-    );
-}
+// const CreditCard = ({cardInfo}) => {
+//     return(
+//         <div>
+//             <p>Name: {cardInfo.name}</p>
+//             <p>Expiry Date: {cardInfo.expiry}</p>
+//             <p>Card No.: {cardInfo.cardNo}</p>
+//             <p>Bank: {cardInfo.bankName}</p>
+//         </div>
+//     );
+// }
 
-//--------------PropTypes------------------//
-CreditCard.propTypes={
-    cardInfo:PropTypes.shape({
-        name:PropTypes.string.isRequired,
-        expiry:PropTypes.string.isRequired,
-        cardNo:PropTypes.string.isRequired,
-        bankName:PropTypes.string.isRequired
-    }).isRequired
-}
+// //--------------PropTypes------------------//
+// CreditCard.propTypes={
+//     cardInfo:PropTypes.shape({
+//         name:PropTypes.string.isRequired,
+//         expiry:PropTypes.string.isRequired,
+//         cardNo:PropTypes.string.isRequired,
+//         bankName:PropTypes.string.isRequired
+//     }).isRequired
+// }
 
-const cardInfo={
-    name:"Saqib Amin",
-    expiry:"10/20",
-    cardNo:"1044 4455 6325 8888",
-    bankName:"Standard Chartered Bank"
-}
+// const cardInfo={
+//     name:"Saqib Amin",
+//     expiry:"10/20",
+//     cardNo:"1044 4455 6325 8888",
+//     bankName:"Standard Chartered Bank"
+// }
 
-ReactDOM.render(
-    <CreditCard cardInfo={cardInfo}/>,
-    document.getElementById("root")
-);
+// ReactDOM.render(
+//     <CreditCard cardInfo={cardInfo}/>,
+//     document.getElementById("root")
+// );
 
 
 //----------------------------Example-4-------------------//
