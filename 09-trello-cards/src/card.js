@@ -14,25 +14,22 @@ import ItemList from './ItemList';
 // )
 
 // Multiple Card Data
-const Card = ({cardList}) =>{    
+const Card = ({cardList}) =>{      
     return(
         cardList.map( (card) => (   
-            <div style = {{border:"2px solid purple",width : 150, height : 150, marginTop : 50, marginBottom : 50  }}>         
+            <div style = {{border:"2px solid purple",width : 150, height : 150, marginTop : 50, marginBottom : 50  }}>                   
             <table>
                 <tbody>
                     <ItemList itemList={card}/>
                 </tbody>
             </table>
             </div>
-        ))
-    );
+        ))        
+    );        
 }
 
-
-
-
 Card.propTypes={
-    card:PropTypes.object
+    cardList:PropTypes.array
 }
 
 export default Card;

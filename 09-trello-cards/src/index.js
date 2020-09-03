@@ -86,8 +86,7 @@ const testData={
         card_itemListArray:[
             card1_items,
             card2_items
-    ]
-        
+    ]        
         //card2_itemList:card2_items,
     },
     footer:{
