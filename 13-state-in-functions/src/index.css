@@ -1,0 +1,15 @@
+.lit{
+    background-color: white;
+    color: black;
+}
+.dark{
+    background-color: black;
+    color:white;
+}
+.room{
+    border:"2px solid black";
+    width : 150px;
+    height : 150px; 
+    margin-top : 50;
+    margin-bottom : 50;
+}
