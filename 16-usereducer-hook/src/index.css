@@ -1,0 +1,36 @@
+.low{
+    background-color: rgba(233, 31, 31, 0.411);
+    color: black;
+}
+
+.medium{
+    background-color: rgba(209, 23, 23, 0.705);
+    color: black;
+}
+
+.high{
+    background-color: rgb(224, 22, 22);
+    color: black;
+}
+
+.off{
+    background-color: black;
+    color:white;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.broken{
+    background-color: white;
+    color:black;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.room{
+    border:"5px solid black";
+    width : 150px;
+    height : 150px; 
+    margin-top : 50;
+    margin-bottom : 50;
+}
