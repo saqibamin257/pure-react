@@ -21,3 +21,13 @@
     .CartItem-removeOne {
     border-right: none;
     }
+    .Total-Amount{
+        font-size: 30px;
+        float: right;
+        font-weight: 600;
+    }
+    .EmptyCart-Message{
+        text-align: center;
+        font-size: 20px;
+        color:slategray;
+    }

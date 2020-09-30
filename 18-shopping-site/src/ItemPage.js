@@ -21,8 +21,6 @@ function ItemPage({items,onAddToCart}){
                              Add to Cart
                          </button>
                     </Item>
-
-
                 </li>
             ))}
         </ul>

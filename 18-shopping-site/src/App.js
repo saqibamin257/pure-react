@@ -22,9 +22,11 @@ const App = () => {
 
     const[activeTab,setActiveTab] = useState('items');
     const[cart,setCart]=useState([]);
+    const[totalAmount,setTotalAmount] = useState(0);
     
     const addToCart = (item) => {
-      setCart( prevCart => [...prevCart,item]);
+      setCart( prevCart => [...prevCart,item]);      
+      setTotalAmount(totalAmount => Math.round((totalAmount + item.price)*100)/100 );
     };
     
     const removeItem = item => {
@@ -36,20 +38,16 @@ const App = () => {
         return copy;
         });
         }
-        };
-    // const addToCart = item => {
-    //     cart.push(item);
-    //     setCart(cart);
-    // }
+        setTotalAmount(totalAmount => Math.round((totalAmount - item.price)*100)/100);
+        };    
  
     return(
-        <div className ="App">
-             <div>
-               {cart.length} items
-            </div>
+        <div className ="App">            
             <Nav
             activeTab = {activeTab}
             onTabChange = {setActiveTab}
+            totalItems={cart.length}
+            totalAmount={totalAmount}
             />
            
             <main className = "App-content" >
@@ -58,14 +56,15 @@ const App = () => {
              onAddToCart = {addToCart}             
              onRemoveItem={removeItem}
              cart={summarizeCart(cart)}
-              />
+             totalAmount={totalAmount}             
+              />             
             </main>
 
         </div>
     );
 }
 
-const Content = ({tab, onAddToCart ,onRemoveItem, cart}) => {
+const Content = ({tab, onAddToCart ,onRemoveItem, cart,totalAmount}) => {
     switch(tab){
         default:
             case 'items':
@@ -75,13 +74,17 @@ const Content = ({tab, onAddToCart ,onRemoveItem, cart}) => {
                     onAddToCart={onAddToCart}
                 />
                 );                
-            case 'cart':
+            case 'cart':                
                 return (
                 <CartPage 
                 items={cart}
                 onAddOne={onAddToCart}
                 onRemoveOne={onRemoveItem}
+                totalAmount={totalAmount}
                 />);
     }
 };
+
+
+
 export default App;

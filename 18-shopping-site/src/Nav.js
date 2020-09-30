@@ -1,6 +1,7 @@
 import React from 'react';
+import './Nav.css';
 
-const Nav =({activeTab, onTabChange})=>{
+const Nav =({activeTab, onTabChange, totalItems, totalAmount})=>{
     const itemClass = tabName =>
         `App-nav-item ${
         activeTab === tabName ? 'selected' : ''
@@ -17,10 +18,28 @@ const Nav =({activeTab, onTabChange})=>{
                     <button onClick={()=> onTabChange('cart')}>
                         Cart
                     </button>
-                </li>
+                </li>                
+                
+                    <ShoppingCartSummary
+                     totalItems = {totalItems}
+                     totalAmount = {totalAmount}/>
+                
             </ul>
+            
         </nav>        
     );
 }
+
+const ShoppingCartSummary = ({totalItems,totalAmount}) => {
+    return(
+        <span className = "shopping-summary">
+        <i className="fa fa-shopping-cart"></i>
+        {` ${totalItems} items ($${totalAmount})`}
+        </span>
+        
+        
+    );
+}
+
 
 export default Nav;
