@@ -24,7 +24,7 @@ function Tweet({tweet}){
 }
 //------propTypes with shape------//
 
-// Tweet.prototype={
+// Tweet.propTypes={
 //     tweet:PropTypes.shape({
 //         message:PropTypes.string,
 //         gravatar:PropTypes.string,
@@ -39,7 +39,7 @@ function Tweet({tweet}){
 // };
 
 //------propTypes with object------//
-Tweet.prototype={
+Tweet.propTypes={
     tweet:PropTypes.objectOf(PropTypes.object)
 };
 
@@ -54,8 +54,8 @@ function Avatar({hash}){
         />
     );
 }
-//-------propsType-------//
-Avatar.prototype={
+//-------propType-------//
+Avatar.propTypes={
     hash:PropTypes.string
 };
 
@@ -80,7 +80,7 @@ const Time = ({time}) => {
 }; 
 
  //-----propTypes------//  
-Time.prototype={
+Time.propTypes={
     time:PropTypes.string
 };
 
