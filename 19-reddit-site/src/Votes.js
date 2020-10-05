@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-
+import {Image, ArrowUp,ArrowDown} from './Icon';
 
 const Votes= ({score}) =>{
     const [vote,setVote] = useState(score);
@@ -11,11 +11,11 @@ const Votes= ({score}) =>{
         setVote(vote => vote-1);
     }
     return(
-    <span>
+    <span >
+        <ArrowUp VoteUp={() => addVote()}/>
         votes :{vote}
-        <button onClick={() => addVote()}>Add</button>
-        <button onClick={() => decreaseVote()}>Minus</button>
-    
+        <ArrowDown VoteDown={() => decreaseVote()} />
+        <Image/>
     </span>
     );
 }
