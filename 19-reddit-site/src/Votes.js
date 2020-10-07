@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import PropTypes from 'prop-types';
 import {Image, ArrowUp,ArrowDown} from './Icon';
 
 const Votes= ({score}) =>{
@@ -18,6 +19,10 @@ const Votes= ({score}) =>{
         <Image/>
     </span>
     );
+}
+
+Votes.propTypes={
+    score:PropTypes.number.isRequired
 }
 
 export default Votes;

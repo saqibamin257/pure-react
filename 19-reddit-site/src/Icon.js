@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Image.css';
 
 const Image =() => {
@@ -7,17 +8,27 @@ const Image =() => {
     );
 }
 
+
 const ArrowUp =({VoteUp})=>{
     return(
         <span className="image-icon" onClick={VoteUp}><i className="fa fa-arrow-up"></i></span>
         
     );
 }
+//-------proptypes
+ArrowUp.propTypes={
+    VoteUp:PropTypes.func.isRequired
+}
 
 const ArrowDown =({VoteDown})=>{
     return(
        <span className="image-icon" onClick={VoteDown}> <i className="fa fa-arrow-down"></i></span>
     );
+}
+
+//----proptypes
+ArrowDown.propTypes={
+    VoteDown:PropTypes.func.isRequired
 }
 
 export{

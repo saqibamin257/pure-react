@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import PostList from './PostList';
 
 class App extends React.Component{
@@ -43,5 +44,10 @@ class App extends React.Component{
         );
     }
 }
+
+App.propTypes={
+    subreddit:PropTypes.string.isRequired
+}
+
 
 export default App;
