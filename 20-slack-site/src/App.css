@@ -1,0 +1,13 @@
+.categories{
+    float: left;    
+    border: darkgreen;
+    border-style: double;
+    height: 100%;
+    margin: 0px; 
+}
+.chatbox{
+    float: right;
+    border:dimgrey;
+    border-style: double;
+
+}
