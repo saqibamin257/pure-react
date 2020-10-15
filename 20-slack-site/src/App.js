@@ -8,13 +8,16 @@ import  './App.css';
 const App = () =>{
     const[categoryName,setCategoryName] = useState("People");
     const[ID,setID]=useState(0);
+    //const[Chat,setChat] = useState(slackData);
     
     
-    const MessageDetails = (Msg_ID,Msg_Category) =>{                    
+  const MessageDetails = (Msg_ID,Msg_Category) =>{                    
         //console.log(`ID: ${Msg_ID} Category: ${Msg_Category}`);
         setCategoryName(Msg_Category);
         setID(Msg_ID);
-  }; 
+  };
+
+
     return(
         <div>
             <div className="categories">
@@ -22,7 +25,7 @@ const App = () =>{
             </div>
 
             <div className="chatbox">
-                <ChatBox categoryName={categoryName} ID={ID}  ChatData={slackData} />
+                <ChatBox categoryName={categoryName} ID={ID}  Chat={slackData}  />
             </div>
         </div>
     );
